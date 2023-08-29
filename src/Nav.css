@@ -1,12 +1,23 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Autres styles */
-  }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Ajoutez un espacement pour améliorer l'apparence */
+}
+
+nav ul {
+  list-style: none; /* Élimine les puces de la liste */
+  display: flex; /* Affiche les éléments en ligne */
+  gap: 20px; /* Ajoute un espace entre les éléments */
+  align-items: center; /* Aligne verticalement les éléments dans la liste */
+}
+
+nav li {
   
-  .navigation {
-    display: flex;
-    gap: 20px;
-    /* Autres styles pour la navigation */
-  }
+  display: block; /* Ajoute un espace interne pour améliorer l'apparence */
+}
+
+nav img{
+  align-self: flex-end;
+}
+

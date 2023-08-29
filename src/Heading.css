@@ -1,0 +1,42 @@
+.heading {
+    display: flex;
+    padding: 10px 30px 20px 60px; /* Ajustez les marges horizontales */
+  }
+  
+  .heading-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .heading h1,
+  .heading h3 {
+    margin: 0;
+  }
+  
+  .heading p {
+    margin: 10px 0;
+    max-width: 600px; /* Définissez une largeur maximale pour le paragraphe */
+  }
+  
+  .heading img {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+  }
+  
+  button {
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 150px; 
+    background-color: black;
+  }
+  button p{
+    color :white
+  }
+  img{
+    margin-right:100px;
+    padding: auto;
+  }
+  
+ 
