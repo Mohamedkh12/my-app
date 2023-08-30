@@ -1,0 +1,50 @@
+/* Specials.css */
+
+.special {
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 350px;
+    display: flex; /* Ajout de la flexibilité pour aligner les éléments en ligne */
+  }
+  
+  .card img {
+    margin-right: 20px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .menu-button {
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .card-price {
+    display: flex;
+   flex-wrap: wrap;
+  }
+
+  .price{
+    padding-left: 100px;
+  }
+
+  .core{
+    padding: 40px;
+    margin-left: 100px;
+    
+  }
