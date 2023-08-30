@@ -1,50 +1,72 @@
-/* Specials.css */
 
-.special {
+
+  .specials {
     text-align: center;
-    padding: 40px;
+    margin-top: 6em;
+}
+
+.specials-head {
+    margin-bottom: 1em;
+}
+
+.cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    max-width: 350px;
-    display: flex; /* Ajout de la flexibilité pour aligner les éléments en ligne */
-  }
-  
-  .card img {
-    margin-right: 20px;
-  }
-  
-  .card-content {
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.custom-card {
+    width: 18rem;
+    margin: 1em;
+}
+
+.card-body {
+    font-family: "Karla", sans-serif;
+    background-color: #f2efef;
+    padding: 1em;
+    box-shadow: 5px 10px 20px #ccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
-  .menu-button {
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
+    height: 100%;
+}
 
-  .card-price {
+.card-title {
+    font-family: "Markazi Text", serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.btn-primary {
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+}
+
+.specials-head {
     display: flex;
-   flex-wrap: wrap;
-  }
+    justify-content: space-between; /* This will place the title on the left and button on the right */
+    align-items: center; /* Center vertically within the div */
+    margin-bottom: 1em;
+}
 
-  .price{
-    padding-left: 100px;
-  }
+h1 {
+    margin-left: 200px;
+}
 
-  .core{
-    padding: 40px;
-    margin-left: 100px;
-    
-  }
+#button {
+    color :white;
+   margin-right: 200px;
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#button:focus {
+    outline: none; /* Remove the focus outline */
+}
