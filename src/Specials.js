@@ -1,69 +1,58 @@
-import "./Specials.css";
-import salad from "./icons_assets/greek salad.jpg";
-import Burchetta from "./icons_assets/bruchetta.svg";
-import dessert from "./icons_assets/lemon dessert.jpg";
-
-
+import React from "react";
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import Button from "react-bootstrap/Button";
+import salad from "./icons_assets/greek salad.jpg";
+import bruchetta from "./icons_assets/bruchetta.svg";
+import dessert from "./icons_assets/lemon dessert.jpg";
+import "./Specials.css";
 
-
-export function Specials() {
-  return (
-    <CardGroup className="core">
-      <Card>
-        <Card.Img variant="top" src={salad} />
-        <Card.Body>
-        <div className="card-price">
-          <Card.Title>Greek Salad</Card.Title>
-          
-          <Card.Text className="price">$12.99</Card.Text>
-          </div>
-          <Card.Text>
-          Diam quam nulla porttitor massa. Sit amet aliquam id diam. Ut
-            venenatis tellus in metus. Fringilla phasellu
-          </Card.Text>
-        
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Order a delevery</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={Burchetta} />
-        <Card.Body>
-        <div className="card-price">
-          <Card.Title>Burchetta</Card.Title>
-          <Card.Text className="price"> $5.99</Card.Text>
-          </div>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Order a delevery</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={dessert} />
-        <Card.Body>
-        <div className="card-price">
-          <Card.Title>lemon Dessert</Card.Title>
-          <Card.Text className="price"> $5.00</Card.Text>
-          </div>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
-  );
+function Specials() {
+    return (
+        <div className="specials">
+            <div className="specials-head">
+                <h1>Specials</h1>
+                <button id="button">Online Menu</button>
+            </div>
+            <div className="cards">
+                <Card className="custom-card">
+                    <Card.Img variant="top" src={salad} />
+                    <Card.Body>
+                        <Card.Title>Greek Salad</Card.Title>
+                        <Card.Text>
+                            The famous Greek salad of crispy lettuce, peppers, olives and our
+                            Chicago style feta cheese, garnished with crunchy garlic and
+                            rosemary croutons.
+                        </Card.Text>
+                        <Button variant="primary">Order Delivery</Button>
+                    </Card.Body>
+                </Card>
+                <Card className="custom-card">
+                    <Card.Img variant="top" src={bruchetta} />
+                    <Card.Body>
+                        <Card.Title>Bruschetta</Card.Title>
+                        <Card.Text>
+                            Our Bruschetta is made from homemade grilled bread that has been
+                            smeared with garlic and seasoned with salt and olive oil. Topped
+                            with fresh vegetables.
+                        </Card.Text>
+                        <Button variant="primary">Order Delivery</Button>
+                    </Card.Body>
+                </Card>
+                <Card className="custom-card">
+                    <Card.Img variant="top" src={dessert} />
+                    <Card.Body>
+                        <Card.Title>Lemon Cake</Card.Title>
+                        <Card.Text>
+                            This comes straight from grandma’s recipe book, every last
+                            ingredient has been sourced and is as authentic as can be
+                            imagined.
+                        </Card.Text>
+                        <Button variant="primary">Order Delivery</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+        </div>
+    );
 }
 
 export default Specials;
