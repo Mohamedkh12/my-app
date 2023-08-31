@@ -1,6 +1,9 @@
 import "./App.css";
 import { Nav } from './Nav';
 import {Heading} from "./Header"
+import { About } from "./About";
+import {Testimonials} from "./Testimonials"
+import Specials from "./Specials";
 
 function App() {
   return (
@@ -9,6 +12,14 @@ function App() {
         <Nav />
         <Heading/>
       </header>
+      <main>
+        <Specials/>
+        <Testimonials/>
+        
+      </main>
+      <footer>
+        <About/>
+        </footer>
     </div>
   );
 }

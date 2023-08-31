@@ -1,0 +1,30 @@
+/* styles.css */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+#pp{
+    width: 500px;
+    padding-left:200px;
+}
+.about-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-img {
+    display: flex;
+   
+    align-items: center;
+}
+
+.about-img img {
+    margin-top: 20px;
+}
+
+h3{
+    padding-left:200px;
+}

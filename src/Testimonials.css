@@ -10,6 +10,7 @@
     width: 100%
 }
 
+
 .testimonial-header {
     color: #f4ce14;
     font-family: Markazi Text,serif;
@@ -63,4 +64,15 @@
     font-size: 25px;
     margin: .1em;
     text-align: center
+}
+
+
+.review h2#p1,
+.review h2#p2,
+.review h2#p3,
+.review h2#p4 {
+  justify-content: center;
+   margin-left: 40px;
+    font-size: 24px; /* Exemple de style */
+    margin-top: 10px; /* Exemple de style */
 }
