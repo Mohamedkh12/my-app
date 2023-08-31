@@ -3,6 +3,7 @@ import { Nav } from './Nav';
 import {Heading} from "./Header"
 import { About } from "./About";
 import {Testimonials} from "./Testimonials"
+
 import Specials from "./Specials";
 
 function App() {
@@ -15,11 +16,9 @@ function App() {
       <main>
         <Specials/>
         <Testimonials/>
-        
-      </main>
-      <footer>
         <About/>
-        </footer>
+      </main>
+    
     </div>
   );
 }
