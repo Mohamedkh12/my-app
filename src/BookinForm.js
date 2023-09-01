@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
-export function BookingForm(){
+export function BookingForm({availableTimes,updateTimes,initializateTime}){
     const [Date,setdate]=useState('');
     const[time,setTime]=useState('17:00');
     const[guests,setguests]=useState(1)
     const [occasion, setOccasion] = useState('Birthday');
+    const [timeState,dispatch]=useReducer(timeReduce,availableTimes);
+    useEffect(()=>{
+        initializateTime()
+    
+    },[initializateTime]
+    )
+
+    useEffect(()=>{
+    updateTimes(date)
+    
+
+},[date,updateTimes]
+    )
 
   const availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   const handleSubmit=(e)=>{
