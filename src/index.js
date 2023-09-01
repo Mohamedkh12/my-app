@@ -4,9 +4,10 @@ import './index.css'; // Importez vos styles CSS
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-  <React.StrictMode>
+import { BrowserRouter as Router } from 'react-router-dom';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Router>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root') // Rendez l'application dans l'élément DOM avec l'ID "root"
+  </Router>
 );
