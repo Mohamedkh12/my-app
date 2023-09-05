@@ -1,48 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { BookingForm } from "./BookingForm";
-import { fetchAPI } from "./api";
-import { useCallback } from "react";
+import { fetchAPI, submitAPI } from "./api";
 
 export function BookingPage() {
   const [availableTimes, setAvailableTimes] = useState([]);
-  const [selectedDate, setSelectedDate] = useState(""); // Ajoutez un état pour stocker la date sélectionnée
 
-  // Fonction pour initialiser les horaires (peut rester la même)
-  function initializeTimes() {
+   function initializeTimes() {
     const mockAvailableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-    setAvailableTimes(mockAvailableTimes);
+    return mockAvailableTimes;
   }
-
-  // Utilisez useEffect pour appeler initializeTimes lors du montage du composant
+  
   useEffect(() => {
-    initializeTimes();
+    const mockAvailableTimes = initializeTimes(); // Utilisez la fonction pour initialiser les horaires disponibles
+    setAvailableTimes(mockAvailableTimes);
   }, []);
 
-  const updateTimes = useCallback(() => {
-    // Appelez la fonction fetchAPI avec la date sélectionnée et mettez à jour les horaires disponibles
-    fetchAPI(selectedDate)
+  const updateTimes = useCallback((date) => {
+    fetchAPI(date)
       .then((data) => {
         setAvailableTimes(data);
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération des horaires disponibles : ", error);
       });
-  }, [selectedDate]);
-  
-  useEffect(() => {
-    if (selectedDate) {
-      updateTimes();
+  }, []);
+
+  const handleSubmit = async (formData) => {
+    try {
+      const response = await submitAPI(formData);
+
+      if (response.success) {
+        console.log("Formulaire soumis avec succès !");
+      } else {
+        console.error("Erreur lors de la soumission du formulaire.");
+      }
+    } catch (error) {
+      console.error("Erreur lors de la requête :", error);
     }
-  }, [selectedDate, updateTimes]);
-  
+  };
 
   return (
     <div>
       <h1>Booking Page</h1>
       <BookingForm
         availableTimes={availableTimes}
-        setSelectedDate={setSelectedDate} // Passez la fonction pour mettre à jour la date sélectionnée
-        initializeTimes={initializeTimes}
+        updateTimes={updateTimes}
+        submitForm={handleSubmit}
       />
     </div>
   );

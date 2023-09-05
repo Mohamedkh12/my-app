@@ -1,6 +1,8 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import BookingForm, { initializeTimes, updateTimes } from './BookinForm'; // Assurez-vous d'importer correctement les fonctions depuis votre composant
+import BookingForm from './BookingForm'; 
+import  initializeTimes from "./BookingForm"
+import updateTimes from "./BookingForm"
 import { BookingPage } from './booking';
 // Mockez la fonction fetchAPI pour qu'elle renvoie des données
 const fetchAPI = jest.fn();
