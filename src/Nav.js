@@ -7,7 +7,7 @@ import { Login } from "./Login";
 import { About } from "./About";
 import { Menu } from "./Menu";
 import "./Nav.css";
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
 
 export function Nav() {
   return (
